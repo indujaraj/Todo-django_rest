@@ -16,7 +16,7 @@ from rest_framework.authtoken.models import Token
 
 
 class TodosView(APIView):
-    authentication_classes = [authentication.BasicAuthentication, authentication.SessionAuthentication]
+
     permission_classes = [permissions.IsAuthenticated]
 
     def get(self, request, *args, **kwargs):
@@ -37,7 +37,7 @@ class TodosView(APIView):
 
 
 class TodoDetailView(APIView):
-    authentication_classes = [authentication.BasicAuthentication, authentication.SessionAuthentication]
+
     permission_classes = [permissions.IsAuthenticated]
 
     def get_object(self, id):
